@@ -80,7 +80,7 @@ class NameAndGoals(PromptStrategy):
             ),
         },
     )
-
+    
     default_configuration: NameAndGoalsConfiguration = NameAndGoalsConfiguration(
         model_classification=LanguageModelClassification.SMART_MODEL,
         system_prompt=DEFAULT_SYSTEM_PROMPT,

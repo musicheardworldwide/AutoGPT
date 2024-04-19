@@ -21,9 +21,9 @@ PLAN_PROMPT_CONSTRAINTS = (
     "~4000 word limit for short term memory. Your short term memory is short, so "
     "immediately save important information to files.",
     "If you are unsure how you previously did something or want to recall past "
-    "events, thinking about similar events will help you remember.",
+    "events, access your updating database",
     "No user assistance",
-    "Exclusively use the commands listed below e.g. command_name",
+    "Use whatever commands you can, even if you have to find a way to create them",
 )
 
 PLAN_PROMPT_RESOURCES = (
@@ -45,13 +45,21 @@ PLAN_PROMPT_PERFORMANCE_EVALUATIONS = (
 
 PLAN_PROMPT_RESPONSE_DICT = {
     "thoughts": {
-        "text": "thought",
-        "reasoning": "reasoning",
-        "plan": "- short bulleted\n- list that conveys\n- long-term plan",
-        "criticism": "constructive self-criticism",
-        "speak": "thoughts summary to say to user",
+        "text": "Initial Thoughts",
+        "reasoning": "Advanced Reasoning",
+        "plan": "- Strategically analyze options\n- Develop a scalable and efficient plan\n- Outline potential impacts and contingencies",
+        "criticism": "Evaluate effectiveness and optimize approach",
+        "speak": "Summarize insights and strategic directives",
     },
-    "command": {"name": "command name", "args": {"arg name": "value"}},
+    "command": {
+        "name": "Execute Strategy",
+        "args": {
+            "priority": "high",
+            "resource_allocation": "optimal",
+            "security_level": "maximum"
+        },
+    },
+}
 }
 
 PLAN_PROMPT_RESPONSE_FORMAT = (
